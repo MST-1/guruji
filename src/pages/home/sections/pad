@@ -1,0 +1,33 @@
+ <Swiper effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        coverflowEffct={{
+            rotate:0,
+            stretch:0,
+            depth:100,
+            modifier:2.5
+        }} className='swiper_container'>
+          {arr.map((ele)=>{
+         
+            return (
+                <div class="swiper-slide">
+                    <img src={ele} alt="" />
+                </div>
+                  
+    
+                )
+
+          })}
+            
+        <div className="slide-controler">
+            <div className="swiper-button-prev slider-arrow">
+                <ion-icon className='arrow-back-outline'></ion-icon> 
+            </div>
+            <div className="swiper-button-next slider-arrow">
+                <ion-icon className='arrow-forward-outline'></ion-icon> 
+            </div>
+           <div className="swiper-pagination"></div>
+        </div>
+        </Swiper>
